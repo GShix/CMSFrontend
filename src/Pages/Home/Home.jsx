@@ -1,6 +1,20 @@
+
+import axios from "axios";
 import Navbar from "../../Components/Navbar";
+
 import "./Home.css";
+import { useEffect } from "react";
 const Home = () => {
+
+  //API call
+  const getBlogs = async () =>{
+    const response = await axioss.get('http://localhost:2000/blogs');
+    console.log(response)
+  }
+  useEffect(()=>{
+    fetchBlogs();
+  },[])
+  
   return (
     <div>
       <Navbar />
